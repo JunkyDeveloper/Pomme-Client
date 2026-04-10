@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=Pomme
+Comment=High-performance Minecraft client written in Rust
+Exec=pomme
+Icon=pomme-client
+Terminal=false
+Type=Application
+Categories=Game;

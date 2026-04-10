@@ -56,3 +56,22 @@ opt-level = 2
 
 [build-dependencies]
 shaderc = "0.10"
+
+[package.metadata.deb]
+name = "pomme-client"
+maintainer = "PommeMC <https://github.com/PommeMC>"
+copyright = "2026, PommeMC contributors"
+license-file = ["LICENSE", "0"]
+extended-description = """\
+Pomme is a from-scratch Minecraft: Java Edition client written in Rust.
+It connects to vanilla servers, renders the world through Vulkan, and
+handles physics, networking, and UI without any Mojang code."""
+section = "games"
+priority = "optional"
+depends = "$auto, libvulkan1, libxkbcommon0, libwayland-client0"
+assets = [
+    ["target/release/pomme", "usr/bin/", "755"],
+    ["README.md", "usr/share/doc/pomme-client/README", "644"],
+    ["assets/icon.png", "usr/share/pixmaps/pomme-client.png", "644"],
+    ["debian/pomme-client.desktop", "usr/share/applications/pomme-client.desktop", "644"],
+]
